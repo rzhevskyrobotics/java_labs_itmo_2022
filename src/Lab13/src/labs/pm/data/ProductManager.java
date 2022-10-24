@@ -203,7 +203,7 @@ public class ProductManager {
     }
 
 
-    private void dumpData() {
+    public void dumpData() {
         try {
             if (Files.notExists(tempFolder)) {
                 Files.createDirectory(tempFolder);
@@ -221,7 +221,7 @@ public class ProductManager {
     }
 
     @SuppressWarnings("unchecked")
-    private void restoreData() {
+    public void restoreData() {
         try {
             Path tempFile = Files.list(tempFolder)
                     .filter(path->path.getFileName().toString().endsWith("tmp"))
